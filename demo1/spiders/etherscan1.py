@@ -77,13 +77,14 @@ class etherscan1Spider(scrapy.Spider):
 
         filename1 = "./sol/sc_" + sc_name + "_" + sc_addr0 + ".sol"
         filename2 = "./sol/sc_" + sc_name + "_" + sc_addr0 + ".ifsol"
-        with open(filename1, 'w') as f:
-            # f.write(response.body)
-            f.write(sc_content[0])
+        if (not sc_content[0] == []):
+            with open(filename1, 'w') as f:
+                # f.write(response.body)
+                f.write(sc_content[0])
 
-        with open(filename2, 'w') as f:
-            # f.write(response.body)
-            f.write(sc_abstract[0])
+            with open(filename2, 'w') as f:
+                # f.write(response.body)
+                f.write(sc_abstract[0])
 
         self.log("writing " + filename1)
         # print(sc_addr,sc_name,sc_content,sc_abstract)
