@@ -88,3 +88,14 @@ DOWNLOAD_DELAY = 1
 # HTTPCACHE_DIR = 'httpcache'
 # HTTPCACHE_IGNORE_HTTP_CODES = []
 # HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
+DEFAULT_REQUEST_HEADERS = {
+    'Accept': 'text/html; charset=utf-8',
+    'Accept-Language': 'zh-CN,zh;q=0.8',
+    'Referer': ' https://etherscan.io/',
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.75 Safari/537.36',
+
+}
+# DOWNLOADER_MIDDLEWARES = {
+#     'scrapy.downloadermiddlewares.redirect.RedirectMiddleware': None,
+#     'etherscan1Spider.middlewares.ThreatDefenceRedirectMiddleware': 600,
+# }
