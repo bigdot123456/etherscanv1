@@ -101,8 +101,8 @@ class etherscan1Spider(scrapy.Spider):
                 # f.write(sc_content[0])
 
         with open(filename2, 'w') as f:
-            if len(sc_content):
-                f.write(sc_content[0])
+            if len(sc_abstract):
+                f.write(sc_abstract[0])
                 # f.write(sc_abstract[0])
 
         self.log("writing " + filename1)
